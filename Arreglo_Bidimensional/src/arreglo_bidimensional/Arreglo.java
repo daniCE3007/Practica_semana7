@@ -49,6 +49,30 @@ public class Arreglo {
         JOptionPane.showMessageDialog(null, "La suma de la diagonal"
                 + " es: " + sumaDiagonal );
         }
+            public void sumaDiagonalInversa() {
+        int sumaInversa = 0;
+        int j = size - 1;
+        for (int i = 0; i < matriz.length; i++) {
+            sumaInversa += matriz[i][j];
+            j--;
+        }
+
+        JOptionPane.showMessageDialog(null, "La suma de la diagonal "
+                + "inversa es: " + sumaInversa);
+    }
+    public void mayorNumeroMat() {
+        int mayorNumero = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                int numero = matriz[i][j];
+                if (numero > mayorNumero) {
+                    mayorNumero = numero;
+                }
+            }
+        }
+        JOptionPane.showMessageDialog(null, "El mayor número "
+                + "es: "+ mayorNumero);
+    }
 
         
 }   

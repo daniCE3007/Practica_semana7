@@ -19,15 +19,33 @@ public class Arreglo_Bidimensional {
         int size = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "Ingrese el tamaño que desea para la matriz:"));  
         Arreglo arreglo = new Arreglo(size);
-        arreglo.rellenarArreglo();
-        arreglo.sumaEsquinas();
-        arreglo.sumaDiagonal();
+               arreglo.rellenarArreglo();
         
-        
-        
-        
-        
-        
+        int a = 0;
+        while (a != 5) {
+            a = Integer.parseInt(JOptionPane.showInputDialog(null, "Seleccione "
+                    + "la opcion que desea ejecutar \n"
+                    + "1. Sumar Esquinas \n"
+                    + "2. Sumar Diagonal \n"
+                    + "3. Sumar Diagonal Inversa \n"
+                    + "4. Numero mayor de la matriz \n"
+                    + "5. Salir \n"));
+
+            if (a == 1) {
+                arreglo.sumaEsquinas();
+            } else if (a == 2) {
+                arreglo.sumaDiagonal();
+            } else if (a == 3) { 
+                arreglo.sumaDiagonalInversa();
+            } else if (a == 4) {
+                arreglo.mayorNumeroMat();
+            } else if (a == 5) {
+                JOptionPane.showMessageDialog(null, "Gracias por usar nuestra programa");
+            } else {
+                JOptionPane.showMessageDialog(null, "Ha "
+                        + "seleccionado una opcion no valida, ingrese otra opcion");
+            }
+        }   
     }
     
 }
